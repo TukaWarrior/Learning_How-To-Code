@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import com.example.kyu7.LeapYears;
 
 public class LeapYearsTest {
+    
     @Test
     public void testYear2020(){
     assertEquals(true, LeapYears.isLeapYear(2020));
