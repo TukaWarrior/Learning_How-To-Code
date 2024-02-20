@@ -1,13 +1,10 @@
 package kyu4;
 
 import com.example.kyu4.SnailSort;
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import java.util.Arrays;
 import static java.util.stream.Collectors.joining;
-
-
-
 
 public class SnailSortTest {
     @Test
@@ -27,6 +24,6 @@ public class SnailSortTest {
     public void test(int[][] array, int[] result) {
         String text = int2dToString(array) + " should be sorted to " + Arrays.toString(result);
         System.out.println(text);
-        Assert.assertArrayEquals(result, SnailSort.snail(array));
+        assertArrayEquals(result, SnailSort.snail(array));
     }
 }

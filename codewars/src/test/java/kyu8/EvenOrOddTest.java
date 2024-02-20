@@ -2,7 +2,7 @@ package kyu8;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.example.kyu8.EvenOrOdd;
 
 public class EvenOrOddTest {

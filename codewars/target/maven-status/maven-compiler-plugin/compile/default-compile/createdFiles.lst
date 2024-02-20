@@ -7,11 +7,13 @@ com\example\kyu8\ANeedleInTheHaystack.class
 com\example\kyu8\BeginnerSeries1SchoolPaperwork.class
 com\example\kyu8\AgeRangeCompatibilityEquation.class
 com\example\kyu8\TheFeastOfManyBeasts.class
+com\example\kyu6\MultiplicationTable.class
 com\example\kyu7\AlternateCapitalization.class
 com\example\kyu8\BeginnerSeries2Clock.class
 com\example\kyu8\EvenOrOdd.class
 com\example\kyu6\FindTheOddInt.class
 com\example\kyu6\PersistentBugger.class
+com\example\kyu4\SnailSort.class
 com\example\kyu7\ComplementaryDNA.class
 com\example\kyu6\MultiplesOf3Or5.class
 com\example\kyu8\GrasshopperPersonalizedMessage.class

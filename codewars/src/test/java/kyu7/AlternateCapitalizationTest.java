@@ -1,7 +1,7 @@
 package kyu7;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.example.kyu7.AlternateCapitalization;
 
 public class AlternateCapitalizationTest {
