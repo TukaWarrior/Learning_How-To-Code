@@ -43,6 +43,5 @@ public class _1_String {
         System.out.println("codePointAt:        " + str.codePointAt(0)); // Returns the Unicode of the character at the specified index.
         System.out.println("codePointBefore:    " + str.codePointBefore(1)); // Returns the Unicode of the character before the specified index.
         System.out.println("codePoointCount:    " + str.codePointCount(0, 6)); // Returns the number of Unicode values found in a String (beginIndex, endIndex).
-
     }
 }
