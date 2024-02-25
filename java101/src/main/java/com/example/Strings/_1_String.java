@@ -3,13 +3,16 @@ package com.example.Strings;
 public class _1_String {
     public static void main(String[] args) {
 
+        // https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+        // https://www.w3schools.com/java/java_strings.asp
+
         // Strings are objects that represent a sequence of characters. In Java, Strings are not a primitive data types but are instances of the String class.
 
         String str = " Hello World "; // Strings are stored in a "common pool" for String literals.
         String str2 = " Hello World "; // These two Strings (str1 and str2) point to the same object.
         String str3 = new String("Hello World"); // Creating a new String will make it point to a new String object.
 
-        // String methods are used to perform various actions with a string.
+        // String methods are used to perform various actions with a string. These are some useful ones. 
 
         // Meassure / Find
         System.out.println("length:             " + str.length()); // Returns the number of characters.
