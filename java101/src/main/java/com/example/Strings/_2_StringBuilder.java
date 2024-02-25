@@ -14,10 +14,10 @@ public class _2_StringBuilder {
         StringBuilder strb2 = new StringBuilder("Hello");
         String str = "World";
 
-        System.out.println(strb.append(" ")); // The StingBuilder can append Strings.
-        System.out.println(strb.append(str)); // The StingBuilder can append Strings.
-        System.out.println(strb.append(1)); // The StrungBuilder can append primitive data types.
-        System.out.println(strb.append(true)); // The StringBuilder can append boolean values.
+        System.out.println(strb2.append(" ")); // The StingBuilder can append Strings.
+        System.out.println(strb2.append(str)); // The StingBuilder can append Strings.
+        System.out.println(strb2.append(1)); // The StrungBuilder can append primitive data types.
+        System.out.println(strb2.append(true)); // The StringBuilder can append boolean values.
 
         // StringBuilder methods are used to perform various actions with a StringBuilder. These are some useful ones.
         // StringBuilders also implement most of the String methods.

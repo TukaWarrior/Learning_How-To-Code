@@ -12,12 +12,13 @@ public class _1_String {
         String str2 = " Hello World "; // These two Strings (str1 and str2) point to the same object.
         String str3 = new String("Hello World"); // Creating a new String will make it point to a new String object.
 
+        int i = 1;
         // String methods are used to perform various actions with a string. These are some useful ones.
 
         // Meassure / Find
         System.out.println("length:             " + str.length()); // Returns the number of characters.
         System.out.println("charAt:             " + str.charAt(3)); // Returns the character at specified index. Strings starts at index 0.
-        System.out.println("indexOf:            " + str.indexOf("World"));
+        System.out.println("indexOf:            " + str.indexOf("World")); // Returns the index of the specified String.
 
         // Modify
         System.out.println("toUpperCase:        " + str.toUpperCase()); // Returns String. Converts characters to upper case.
@@ -46,5 +47,19 @@ public class _1_String {
         System.out.println("codePointAt:        " + str.codePointAt(0)); // Returns the Unicode of the character at the specified index.
         System.out.println("codePointBefore:    " + str.codePointBefore(1)); // Returns the Unicode of the character before the specified index.
         System.out.println("codePoointCount:    " + str.codePointCount(0, 6)); // Returns the number of Unicode values found in a String (beginIndex, endIndex).
+
+        // Convert to String
+        String str4 = String.valueOf(256);
+        System.out.println("valueOf:            " + str4); // Converts a different datatype into a String. (int, double, long, boolean etc.)
+
+
+        // Converting a String into an array of chars.
+        String str5 = "This is an String in an Char Array";
+        char[] charArr5 = new char[str5.length()];
+
+        for (i = 0; i < str5.length(); i++) {
+         charArr5[i] = str5.charAt(i);
+        }
+        System.out.println(charArr5);
     }
 }
