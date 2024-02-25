@@ -32,12 +32,13 @@ public class _1_String {
 
         // Contains / Compares
         System.out.println("contains:           " + str.contains("Hello")); // Returns boolean if String contains specified sequence of characters.
-        System.out.println("equals:             " + str.equals("Hello")); // Returns boolean. Compares two Strings.
+        System.out.println("matches:            " + str.matches(" Hello.*")); // Returns boolean. Searches a string for a match against a regular expression.
+        System.out.println("equals:             " + str.equals(" Hello World ")); // Returns boolean. Compares two Strings.
         System.out.println("equalsIgnoreCase:   " + str.equalsIgnoreCase(" hello world ")); // Returns boolean. Compares two strings, ignoring case considerations.
         System.out.println("startsWith:         " + str.startsWith(" W")); // Returns boolean if the String starts with the specified prefix.
         System.out.println("endsWith:           " + str.endsWith("d ")); // Returns boolean if the String ends with the specified suffix.
-        System.out.println("isEmpty:            " + str.isEmpty()); // Returns Boolean. Checks whether a String is empty or not.
-        System.out.println("isBlank:            " + str.isBlank()); // Returns Boolean. Checks whether a String is empty, ignoring whitespaces.
+        System.out.println("isEmpty:            " + str.isEmpty()); // Returns boolean. Checks whether a String is empty or not.
+        System.out.println("isBlank:            " + str.isBlank()); // Returns boolean. Checks whether a String is empty, ignoring whitespaces.
 
         // Compare lexicographically (Which comes first in a dictionary).
         System.out.println("compareTo:           " + str.compareTo(" Hdllo World ")); // Compares two Strings lexicographically. (Which comes first in a dictionary(-before, +after).
