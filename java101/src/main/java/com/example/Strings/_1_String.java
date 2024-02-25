@@ -12,7 +12,7 @@ public class _1_String {
         String str2 = " Hello World "; // These two Strings (str1 and str2) point to the same object.
         String str3 = new String("Hello World"); // Creating a new String will make it point to a new String object.
 
-        // String methods are used to perform various actions with a string. These are some useful ones. 
+        // String methods are used to perform various actions with a string. These are some useful ones.
 
         // Meassure / Find
         System.out.println("length:             " + str.length()); // Returns the number of characters.
