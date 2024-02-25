@@ -11,7 +11,7 @@ public class _1_String {
 
         // String methods are used to perform various actions with a string.
 
-        // Meassure / Search
+        // Meassure / Find
         System.out.println("length:             " + str.length()); // Returns the number of characters.
         System.out.println("charAt:             " + str.charAt(3)); // Returns the character at specified index. Strings starts at index 0.
         System.out.println("indexOf:            " + str.indexOf("World"));
