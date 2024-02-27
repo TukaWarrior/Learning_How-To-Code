@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // https://regex-generator.olafneumann.org/
         // A regular expression is a sequence of characters that forms a search pattern.
         // When you search for data in a text, you can use this search pattern to describe what you are searching for.
         // Regular expressions can be used to perform all types of text search and text replace operations.
@@ -15,7 +16,7 @@ public class Main {
         Pattern pattern = Pattern.compile("d"); // Defines the Pattern that is searched for.
         Matcher matcher = pattern.matcher("Dog"); // The Matcher method is used to search for a pattern in a String. The matcher object contains information about the search that was performed.
 
-        System.out.println(matcher.find());
+        System.out.println(matcher.find()); // Returns boolean
 
         String str1 = "Dog";
         System.out.println("Hello world!");
@@ -32,7 +33,7 @@ public class Main {
 
         // Logical Operators
         Pattern pattern101 = Pattern.compile("[abc]"); // Matches a, b or c.
-        Pattern pattern102 = Pattern.compile("[a|b|c]"); // Matches a, b or c.
+        Pattern pattern102 = Pattern.compile("[abc]|[def]"); // Matches a, b, c or d, e, f
 
         // Quantifiers
         Pattern p111 = Pattern.compile("[abc]*"); // 0 or more.
@@ -69,10 +70,9 @@ public class Main {
         Pattern pattern42 = Pattern.compile("[abc]", Pattern.COMMENTS); // Whitespaces and comments starting with # are ignored until the end of a line.
         Pattern pattern43 = Pattern.compile("[abc]", Pattern.MULTILINE); // One expression can match multiple lines.
         Pattern pattern44 = Pattern.compile("[abc]", Pattern.UNIX_LINES); // Only the \n line terminator is recognized in the behavior of .,^ and $.
-
         Pattern pattern45 = Pattern.compile("\\z"); // The end of the input.
 
-        Matcher matcher2 = pattern11.matcher("Aa dog");
-        System.out.println(matcher2.find());
+//        Matcher matcher2 = pattern11.matcher("Aa dog");
+//        System.out.println(matcher2.find());
     }
 }
