@@ -30,7 +30,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: <Widget>[
-              // Single-child Widgets
+// Single-child Widgets
 
               // Align
               // A widget that aligns its child within itself and optionally sizes itself based on the child's size.
@@ -38,7 +38,9 @@ class LayoutWidgetsScreen extends StatelessWidget {
               LayoutSection(
                 title: 'Align',
                 child: const Align(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.bottomLeft,
+                  // alignment: Alignment(0.0, 0.0),
+                  // alignment: FractionalOffset(0.2, 0.0),
                   child: Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
                 ),
               ),
@@ -64,9 +66,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
                 child: const Baseline(
                   baseline: 100.0,
                   baselineType: TextBaseline.alphabetic,
-                  child: Text(
-                    'Baseline Text',
-                    style: TextStyle(fontSize: 20.0),
+                  child: Text('Baseline Text', style: TextStyle(fontSize: 20.0),
                   ),
                 ),
               ),
@@ -98,11 +98,9 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // A convenience widget that combines common painting, positioning, and sizing widgets.
               // https://api.flutter.dev/flutter/widgets/Container-class.html
               LayoutSection(
-                title: 'Center',
-                child: Center(
-                  child: Image.network(
-                    'https://play-lh.googleusercontent.com/i7n5e85brViF4lOCmZkCoF1a3olbksyI0LARrzrLB41b00n8ucvLrwJlU57FbGwxzVOa',
-                  ),
+                title: 'Container',
+                child: const Center(
+                  child: Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
                 ),
               ),
 
@@ -178,7 +176,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   child: Container(
                     color: Colors.blue,
                     height: 50,
-                    child: const Center(child: Text('Padding')),
+                    child: const Text('Padding'),
                   ),
                 ),
               ),
@@ -206,9 +204,9 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      Icon(Icons.star, size: 50, color: Colors.red),
-                      Icon(Icons.star, size: 50, color: Colors.green),
-                      Icon(Icons.star, size: 50, color: Colors.blue),
+                      Icon(Icons.flutter_dash, size: 50, color: Colors.red),
+                      Icon(Icons.flutter_dash, size: 50, color: Colors.green),
+                      Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
                     ],
                   ),
                 ),
