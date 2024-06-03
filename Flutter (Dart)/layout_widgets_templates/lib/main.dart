@@ -118,6 +118,159 @@ class LayoutWidgetsScreen extends StatelessWidget {
               //   ),
               // ),
 
+
+
+              // Expanded
+              // A widget that expands a child of a Row, Column, or Flex.
+              // https://api.flutter.dev/flutter/widgets/Expanded-class.html
+
+
+
+
+
+              // FittedBox
+              // Scales and positions its child within itself according to fit.
+              // https://api.flutter.dev/flutter/widgets/FittedBox-class.html
+
+
+
+
+
+              // FractionallySizedBox
+              // A widget that sizes its child to a fraction of the total available space. 
+              // https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
+
+
+
+
+
+
+
+
+              // IntrinsicHeight
+              // A widget that sizes its child to the child's intrinsic height.
+              // https://api.flutter.dev/flutter/widgets/IntrinsicHeight-class.html
+
+
+              // IntrinsicWidth
+              // A widget that sizes its child to the child's intrinsic width.
+              // https://api.flutter.dev/flutter/widgets/IntrinsicWidth-class.html
+
+              // LimitedBox 
+              // A box that limits its size only when it's unconstrained.
+              // https://api.flutter.dev/flutter/widgets/LimitedBox-class.html
+
+              // Offstage
+              // A widget that lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.
+              // https://api.flutter.dev/flutter/widgets/Offstage-class.html
+
+              // OverflowBox
+              // A widget that imposes different constraints on its child than it gets from its parent, possibly allowing the child to overflow the parent.
+              // https://api.flutter.dev/flutter/widgets/OverflowBox-class.html
+
+              // Padding
+              // A widget that insets its child by the given padding.
+              // https://api.flutter.dev/flutter/widgets/Padding-class.html
+              LayoutSection(
+                title: 'Padding',
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    color: Colors.blue,
+                    height: 50,
+                    child: const Center(child: Text('Padding')),
+                  ),
+                ),
+              ),
+
+              // SizedBox
+              // A box with a specified size. If given a child, this widget forces it to have a specific width and/or height. 
+              // https://api.flutter.dev/flutter/widgets/SizedBox-class.html
+
+              // SizedOverflowBox
+              // A widget that is a specific size but passes its original constraints through to its child, which will probably overflow.
+              // https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html
+
+              // Transform
+              // A widget that applies a transformation before painting its child.
+              // https://api.flutter.dev/flutter/widgets/Transform-class.html
+
+
+// Multi-child layout widgets
+
+              // Column
+              // Layout a list of child widgets in the vertical direction.
+              // https://api.flutter.dev/flutter/widgets/Column-class.html
+              LayoutSection(
+                  title: 'Column',
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Icon(Icons.star, size: 50, color: Colors.red),
+                      Icon(Icons.star, size: 50, color: Colors.green),
+                      Icon(Icons.star, size: 50, color: Colors.blue),
+                    ],
+                  ),
+                ),
+
+              // CustomMultiChildLayout
+              // A widget that uses a delegate to size and position multiple children.
+              // https://api.flutter.dev/flutter/widgets/CustomMultiChildLayout-class.html
+              LayoutSection(
+                title: 'CustomMultiChildLayout',
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      width: 200,
+                      height: 200,
+                      color: Colors.red,
+                    ),
+                    Positioned(
+                      left: 50,
+                      top: 50,
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.green,
+                      ),
+                    ),
+                    Positioned(
+                      right: 10,
+                      bottom: 10,
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              
+              // Flow
+              // A widget that implements the flow layout algorithm.
+              // https://api.flutter.dev/flutter/widgets/Flow-class.html
+
+              // GridView
+              // A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout. The GridView widget implements this component.
+              // https://api.flutter.dev/flutter/widgets/GridView-class.html
+
+              // IndexedStack
+              // A Stack that shows a single child from a list of children.
+              // https://api.flutter.dev/flutter/widgets/IndexedStack-class.html
+
+              // LayoutBuilder
+              // Builds a widget tree that can depend on the parent widget's size.
+              // https://api.flutter.dev/flutter/widgets/LayoutBuilder-class.html
+
+              // ListBody
+              // A widget that arranges its children sequentially along a given axis, forcing them to the dimension of the parent in the other axis.
+              // https://api.flutter.dev/flutter/widgets/ListBody-class.html
+
+              // ListView 
+              // A scrollable, linear list of widgets. ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction.
+              // https://api.flutter.dev/flutter/widgets/ListView-class.html
+
               // Row
               // Layout a list of child widgets in the horizontal direction.
               // https://api.flutter.dev/flutter/widgets/Row-class.html
@@ -128,21 +281,6 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   children: <Widget>[
                     Icon(Icons.flutter_dash, size: 50, color: Colors.red),
                     Icon(Icons.flutter_dash, size: 50, color: Colors.green),
-                    Icon(Icons.star, size: 50, color: Colors.blue),
-                  ],
-                ),
-              ),
-
-              // Column
-              // Layout a list of child widgets in the vertical direction.
-              // https://api.flutter.dev/flutter/widgets/Column-class.html
-              LayoutSection(
-                title: 'Column',
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Icon(Icons.star, size: 50, color: Colors.red),
-                    Icon(Icons.star, size: 50, color: Colors.green),
                     Icon(Icons.star, size: 50, color: Colors.blue),
                   ],
                 ),
@@ -174,6 +312,85 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              // Table
+              // Displays child widgets in rows and columns.
+              // https://api.flutter.dev/flutter/widgets/Table-class.html
+
+              // Wrap 
+              // A widget that displays its children in multiple horizontal or vertical runs.
+              // https://api.flutter.dev/flutter/widgets/Wrap-class.html
+
+// Sliver widgets
+
+              // CupertinoSliverNavigationBar
+              // An iOS-styled navigation bar with iOS-11-style large titles using slivers.
+              // https://api.flutter.dev/flutter/cupertino/CupertinoSliverNavigationBar-class.html
+
+              // CustomScrollView
+              // A ScrollView that creates custom scroll effects using slivers.
+              // https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html
+
+              // SliverAppBar
+              // A material design app bar that integrates with a CustomScrollView.
+              // https://api.flutter.dev/flutter/material/SliverAppBar-class.html
+
+              // SliverChildBuilderDelegate
+              // A delegate that supplies children for slivers using a builder callback.
+              // https://api.flutter.dev/flutter/widgets/SliverChildBuilderDelegate-class.html
+
+              // SliverChildListDelegate
+              // A delegate that supplies children for slivers using an explicit list.
+              // https://api.flutter.dev/flutter/widgets/SliverChildListDelegate-class.html
+
+              // SliverFixedExtentList
+              // A sliver that places multiple box children with the same main axis extent in a linear array.
+              // https://api.flutter.dev/flutter/widgets/SliverFixedExtentList-class.html
+
+              // SliverGrid
+              // A sliver that places multiple box children in a two dimensional arrangement.
+              // https://api.flutter.dev/flutter/widgets/SliverGrid-class.html
+
+              // SliverList 
+              // A sliver that places multiple box children in a linear array along the main axis.
+              // https://api.flutter.dev/flutter/widgets/SliverList-class.html
+
+              // SliverPadding
+              // A sliver that applies padding on each side of another sliver.
+              // https://api.flutter.dev/flutter/widgets/SliverPadding-class.html
+
+              // SliverPersistentHeader
+              // A sliver whose size varies when the sliver is scrolled to the edge of the viewport opposite the sliver's GrowthDirection.
+              // https://api.flutter.dev/flutter/widgets/SliverPersistentHeader-class.html
+
+              // SliverToBoxAdapter
+              // A sliver that contains a single box widget.
+              // https://api.flutter.dev/flutter/widgets/SliverToBoxAdapter-class.html
+
+              //
+              //
+              //
+
+              //
+              //
+              //
+
+
+              //
+              //
+              //
+
+              //
+              //
+              //
+
+              //
+              //
+              //
+
+              //
+              //
+              //
 
               // Expanded
               // A widget that expands a child of a Row, Column, or Flex.
@@ -221,21 +438,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // Padding
-              // A widget that insets its child by the given padding.
-              // https://api.flutter.dev/flutter/widgets/Padding-class.html
-              LayoutSection(
-                title: 'Padding',
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Container(
-                    color: Colors.blue,
-                    height: 50,
-                    child: const Center(child: Text('Padding')),
-                  ),
-                ),
-              ),
+              
             ],
           ),
         ),
