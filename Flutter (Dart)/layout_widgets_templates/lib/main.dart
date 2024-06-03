@@ -64,10 +64,9 @@ class LayoutWidgetsScreen extends StatelessWidget {
               LayoutSection(
                 title: 'Baseline',
                 child: const Baseline(
-                  baseline: 100.0,
+                  baseline: 80.0,
                   baselineType: TextBaseline.alphabetic,
-                  child: Text('Baseline Text', style: TextStyle(fontSize: 20.0),
-                  ),
+                  child: Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
                 ),
               ),
 
@@ -89,18 +88,21 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // ConstrainedBox
               // A widget that imposes additional constraints on its child.
               // https://api.flutter.dev/flutter/widgets/ConstrainedBox-class.html
-              // LayoutSection(
-              // title: 'ConstrainedBox',
-              // child: ConstrainedBox(),
-              // ),
+              LayoutSection(
+                title: 'ConstrainedBox',
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints.expand(),
+                  child: const Card(child: Text('Hello World!')),
+                ),
+              ),
 
               // Container
               // A convenience widget that combines common painting, positioning, and sizing widgets.
               // https://api.flutter.dev/flutter/widgets/Container-class.html
               LayoutSection(
                 title: 'Container',
-                child: const Center(
-                  child: Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
+                child: Container(
+                  child: const Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
                 ),
               ),
 
@@ -116,45 +118,38 @@ class LayoutWidgetsScreen extends StatelessWidget {
               //   ),
               // ),
 
-
-
               // Expanded
               // A widget that expands a child of a Row, Column, or Flex.
               // https://api.flutter.dev/flutter/widgets/Expanded-class.html
 
-
-
-
-
               // FittedBox
               // Scales and positions its child within itself according to fit.
               // https://api.flutter.dev/flutter/widgets/FittedBox-class.html
-
-
-
-
+              LayoutSection(
+                title: 'Padding',
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    color: Colors.blue,
+                    height: 50,
+                    child: const Text('Padding'),
+                  ),
+                ),
+              ),
 
               // FractionallySizedBox
-              // A widget that sizes its child to a fraction of the total available space. 
+              // A widget that sizes its child to a fraction of the total available space.
               // https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
-
-
-
-
-
-
-
 
               // IntrinsicHeight
               // A widget that sizes its child to the child's intrinsic height.
               // https://api.flutter.dev/flutter/widgets/IntrinsicHeight-class.html
 
-
               // IntrinsicWidth
               // A widget that sizes its child to the child's intrinsic width.
               // https://api.flutter.dev/flutter/widgets/IntrinsicWidth-class.html
 
-              // LimitedBox 
+              // LimitedBox
               // A box that limits its size only when it's unconstrained.
               // https://api.flutter.dev/flutter/widgets/LimitedBox-class.html
 
@@ -182,7 +177,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
               ),
 
               // SizedBox
-              // A box with a specified size. If given a child, this widget forces it to have a specific width and/or height. 
+              // A box with a specified size. If given a child, this widget forces it to have a specific width and/or height.
               // https://api.flutter.dev/flutter/widgets/SizedBox-class.html
 
               // SizedOverflowBox
@@ -193,23 +188,22 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // A widget that applies a transformation before painting its child.
               // https://api.flutter.dev/flutter/widgets/Transform-class.html
 
-
 // Multi-child layout widgets
 
               // Column
               // Layout a list of child widgets in the vertical direction.
               // https://api.flutter.dev/flutter/widgets/Column-class.html
               LayoutSection(
-                  title: 'Column',
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Icon(Icons.flutter_dash, size: 50, color: Colors.red),
-                      Icon(Icons.flutter_dash, size: 50, color: Colors.green),
-                      Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
-                    ],
-                  ),
+                title: 'Column',
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Icon(Icons.flutter_dash, size: 50, color: Colors.red),
+                    Icon(Icons.flutter_dash, size: 50, color: Colors.green),
+                    Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
+                  ],
                 ),
+              ),
 
               // CustomMultiChildLayout
               // A widget that uses a delegate to size and position multiple children.
@@ -244,7 +238,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               // Flow
               // A widget that implements the flow layout algorithm.
               // https://api.flutter.dev/flutter/widgets/Flow-class.html
@@ -265,7 +259,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // A widget that arranges its children sequentially along a given axis, forcing them to the dimension of the parent in the other axis.
               // https://api.flutter.dev/flutter/widgets/ListBody-class.html
 
-              // ListView 
+              // ListView
               // A scrollable, linear list of widgets. ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction.
               // https://api.flutter.dev/flutter/widgets/ListView-class.html
 
@@ -315,7 +309,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // Displays child widgets in rows and columns.
               // https://api.flutter.dev/flutter/widgets/Table-class.html
 
-              // Wrap 
+              // Wrap
               // A widget that displays its children in multiple horizontal or vertical runs.
               // https://api.flutter.dev/flutter/widgets/Wrap-class.html
 
@@ -349,7 +343,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
               // A sliver that places multiple box children in a two dimensional arrangement.
               // https://api.flutter.dev/flutter/widgets/SliverGrid-class.html
 
-              // SliverList 
+              // SliverList
               // A sliver that places multiple box children in a linear array along the main axis.
               // https://api.flutter.dev/flutter/widgets/SliverList-class.html
 
@@ -372,7 +366,6 @@ class LayoutWidgetsScreen extends StatelessWidget {
               //
               //
               //
-
 
               //
               //
@@ -436,7 +429,6 @@ class LayoutWidgetsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
             ],
           ),
         ),
@@ -448,6 +440,7 @@ class LayoutWidgetsScreen extends StatelessWidget {
 class LayoutSection extends StatelessWidget {
   final String title;
   final Widget child;
+  // static const double sectionHeight = 200.0; // Fixed height for all sections
 
   LayoutSection({required this.title, required this.child});
 
@@ -462,9 +455,15 @@ class LayoutSection extends StatelessWidget {
           children: <Widget>[
             Text(
               title,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(
+              height: 100,
+              width: 400,
+            ),
             child,
           ],
         ),
