@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout_widgets_3/layout_widgets/align_widget.dart';
 
 class WidgetCategoryPage extends StatelessWidget {
   final String title;
@@ -22,10 +23,10 @@ class WidgetCategoryPage extends StatelessWidget {
           ListTile(
             title: const Text('Align'),
             onTap: () {
-              // Navigator.push(
-                // context,
-                // MaterialPageRoute(builder: (context) => const AlignWidgetPage()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AlignWidgetPage()),
+              );
             },
           ),
           // Add more widgets as needed
