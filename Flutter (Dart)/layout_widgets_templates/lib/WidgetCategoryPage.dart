@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:layout_widgets_3/layout_widgets/align_widget.dart';
 
 class WidgetCategoryPage extends StatelessWidget {
   final String title;
