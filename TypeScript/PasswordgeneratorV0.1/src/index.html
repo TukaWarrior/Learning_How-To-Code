@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deterministic Password Generator</title>
+  <style>
+    /* Basic styling for better appearance */
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    input[type="text"], input[type="password"], input[type="date"], input[type="number"] {
+      width: 100%; padding: 8px; margin-top: 5px;
+    }
+    #generate-btn, #copy-btn { margin-top: 20px; padding: 10px 20px; }
+    #generated-password { font-weight: bold; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1>Deterministic Password Generator</h1>
+  <form id="password-form">
+    <label for="website">Website Name:</label>
+    <input type="text" id="website" name="website" required>
+
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="seed">Seed Password:</label>
+    <input type="password" id="seed" name="seed" required>
+
+    <label for="length">Password Length:</label>
+    <input type="number" id="length" name="length" value="16" min="8" max="32">
+
+    <label>
+      <input type="checkbox" id="include-uppercase" checked>
+      Include Uppercase Letters
+    </label>
+    <label>
+      <input type="checkbox" id="include-numbers" checked>
+      Include Numbers
+    </label>
+    <label>
+      <input type="checkbox" id="include-special" checked>
+      Include Special Characters
+    </label>
+
+    <button type="button" id="generate-btn">Generate Password</button>
+  </form>
+
+  <h2>Your Generated Password:</h2>
+  <p id="generated-password"></p>
+  <button type="button" id="copy-btn">Copy to Clipboard</button>
+
+  <script src="./dist/app.js"></script>
+</body>
+</html>
