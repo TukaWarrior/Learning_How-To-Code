@@ -99,7 +99,55 @@ let quantity2 = 100;
 // Nullable Types
 // Can be null.
 function greet(name) {
-    console.log(name.toUpperCase());
+    { // if name is truthy (meaning it has a value)
+        console.log(name.toUpperCase());
+    }
 }
-// greet(null); // Wouild create a 
+// greet(null); // Wouild create an error becaue it is null.
+function greet2(name) {
+    if (name) { // if name is truthy (meaning it has a value)
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log('Hola!');
+    }
+}
+greet2(null);
+function getCustomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(0);
+// console.log(customer.birthday);
+// Compilation error because customer can be null.
+// do this
+if (customer !== null) {
+    console.log(customer.birthday);
+}
+// The problem with multiple variables
+function getCustomer2(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+if (customer !== null && customer !== undefined) {
+    console.log(customer.birthday);
+}
+// Solve it like this.
+let customerA = getCustomer(0);
+// Optional property access operator. 
+// Gets executed only if not null or undefined. 
+console.log(customer?.birthday);
+function getCustomer3(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customerB = getCustomer(1);
+// Only gets executed if customer is not null or undefined and birthday of customer is not null or undefined. 
+console.log(customer?.birthday?.getFullYear);
+// Optional element access operator
+// If this element is not null or undefined. 
+// customers?.[0]
+// Optional call
+let log1 = null;
+// Will crash because log1 is null.
+// log1('a');
+// Execute only if log1 is not null.
+log1?.('a');
 //# sourceMappingURL=index.js.map
